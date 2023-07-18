@@ -1,0 +1,93 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color-primary-white;
+
+  &_dark {
+    background-color: $color-primary-black;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    gap: 20px;
+
+    @include md {
+      height: 88px;
+    }
+
+    @include lg {
+      height: 80px;
+    }
+  }
+
+  &__logo {
+    &_hide {
+      display: none;
+    }
+  }
+
+  &__search-wrapper {
+    flex: 1;
+    display: inline-flex;
+    flex-direction: row-reverse;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__search {
+    display: none !important;
+
+    &_show {
+      display: block !important;
+    }
+  }
+
+  &__search-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+
+    &_hide {
+      display: none;
+    }
+  }
+
+  &__menu-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__menu {
+    display: none;
+    list-style: none;
+
+    @include lg {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__menu-item {
+    text-decoration: none;
+  }
+
+  &__theme {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+}
